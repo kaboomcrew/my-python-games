@@ -40,7 +40,7 @@ def RockPaperScissors():
   ## 1 == Rock, 2 == Paper, 3 == Scissors
   print("You Have 3 Choices, Rock, Paper, Scissors... I Wish you luck...")
   while 1 == 1:
-    playerChoice = input("What Will Be You'r Choice?")
+    playerChoice = input("What Will Be You'r Choice?:\n")
     if playerChoice == "Rock":
       if aichoice == 1:
         print(f.renderText('DRAW!'))
@@ -54,12 +54,35 @@ def RockPaperScissors():
         print(f.renderText('WINNER!'))
         print("The Ai Chose Scissors")
         break
-    if playerChoice == "Paper":
+    elif playerChoice == "Paper":
       if aichoice == 1:
-        print(f.renderText('WINNDER'))
+        print(f.renderText('WINNER'))
         print("The Ai Chose Rock")
         break
       elif aichoice == 2:
-        print(f.renderText(''))
+        print(f.renderText('DRAW'))
+        print("The Ai Chose Paper")
+        break
+      elif aichoice == 3:
+        print(f.renderText('You Lost!'))
+        print("The Ai Chose Scissors")
+        break
+    elif playerChoice == "Scissors":
+      if  aichoice ==  1:
+        print(f.renderText('You Lost!'))
+        print("The Ai Chose Rock")
+        break
+      elif aichoice == 2:
+        print(f.renderText('WINNER'))
+        print("The Ai Chose Paper")
+        break
+      elif aichoice == 3:
+        print(f.renderText('DRAW'))
+        print("The Ai Chose Scissors")
+        break
+    else:
+      print("Sorry, We Could Not UnderStand You'r Input")
+      print("Restarting")
+      time.sleep(0.5)
 
-HigherOrLower()
+
