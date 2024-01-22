@@ -1,6 +1,8 @@
 import random
 from pyfiglet import Figlet, print_figlet
 import time
+import split
+from random import shuffle
 
 def HigherOrLower():
   f = Figlet(font='slant')
@@ -84,5 +86,49 @@ def RockPaperScissors():
       print("Sorry, We Could Not UnderStand You'r Input")
       print("Restarting")
       time.sleep(0.5)
+
+def unscrambleGame():
+  f = Figlet(font="slant")
+  print("You Will Have to Guess the unscrambled word, You Have 5 tries!")
+  ## to add works put strings in the list below
+  num1 = ["Kaboom", "Python", "Game", "Lua", "JavaScript", "Websites", "GitHub"]
+  num1 = random.choice(num1)
+  num1 = num1.lower()
+  word = list(num1)
+  shuffle(word)
+  print(''.join(word))
+  tries = 0
+  while 1 == 1:
+    if tries == 5:
+      print("You Ran Out Of Tries!")
+      break
+    else:
+      userawnser = str(input("You'r Answer:\n"))
+      tries += 1
+      if userawnser == num1:
+        print(f.renderText('WINNER'))
+        time.sleep(0.5)
+        print(f.renderText('WINNER'))
+        print("You took "+str(tries)+" Tries!")
+        break
+      else:
+        print("Nope")
+
+
+def mathematicas():
+  font = Figlet(font="slant")
+  firstnum = random.randint(1,100)
+  secnum = random.randint(1,100)
+  totalnum = firstnum + secnum
+  print("What is "+str(firstnum)+" + "+str(secnum)+"?")
+  plrguess = int(input(""))
+  if plrguess == totalnum:
+    print(font.renderText("CORRECT"))
+    print("Correct")
+  else:
+    print(font.renderText("INCORRECT"))
+    print("Incorrect")
+
+
 
 

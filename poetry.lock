@@ -11,7 +11,17 @@ files = [
     {file = "pyfiglet-1.0.2.tar.gz", hash = "sha256:758788018ab8faaddc0984e1ea05ff330d3c64be663c513cc1f105f6a3066dab"},
 ]
 
+[[package]]
+name = "split"
+version = "0.4"
+description = "Functions to split or partition sequences."
+optional = false
+python-versions = "*"
+files = [
+    {file = "split-0.4.zip", hash = "sha256:c4be970a857d605d94999da18779bc10c34a34f937dede983268de3877b81faa"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "f3e6b87b7225eadd3a53ae5dada2bf120ee567f7ae827d9604e526aa0ba2b316"
+content-hash = "4dd649bc4689dcad3987f1e2a7928c16c011b7b2aa542e24d7160003b243936d"
